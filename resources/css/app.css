@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+
+@source '../../resources/js/**/*.tsx';
+@source '../../resources/views/**/*.blade.php';
+
+@theme {
+    --font-sans:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Logo Brand Colors */
+    --color-brand-50: #f5f4fa;
+    --color-brand-100: #e8e7f0;
+    --color-brand-500: #42427b;
+    --color-brand-600: #363668;
+    --color-brand-700: #2c2c56;
+
+    /* Logo Gold */
+    --color-gold-50: #faf8f2;
+    --color-gold-100: #f1ecdf;
+    --color-gold-500: #cab390;
+    --color-gold-600: #b49d78;
+    --color-gold-700: #967f5d;
+
+    /* Logo Crimson */
+    --color-red-500: #bd4342;
+    --color-red-600: #a93636;
+    --color-red-700: #8f2d2d;
+
+    /* Logo Dark */
+    --color-ink-950: #251f1b;
+}
+
+:root {
+    color-scheme: light;
+
+    --background: #f7f6f3;
+    --foreground: #251f1b;
+
+    --card: #ffffff;
+
+    --muted: #706c67;
+    --border: #e5e1da;
+
+    --primary: #42427b;
+    --primary-foreground: #ffffff;
+
+    --secondary: #cab390;
+    --secondary-foreground: #251f1b;
+
+    --accent: #f1ecdf;
+    --accent-foreground: #42427b;
+
+    --destructive: #bd4342;
+    --destructive-foreground: #ffffff;
+}
+
+.dark {
+    color-scheme: dark;
+
+    --background: #151312;
+    --foreground: #f1ecdf;
+
+    --card: #1d1a18;
+
+    --muted: #a8a19a;
+    --border: #332e2a;
+
+    --primary: #59599a;
+    --primary-foreground: #ffffff;
+
+    --secondary: #cab390;
+    --secondary-foreground: #251f1b;
+
+    --accent: #302b25;
+    --accent-foreground: #cab390;
+
+    --destructive: #d45a59;
+    --destructive-foreground: #ffffff;
+}
+
+@layer base {
+    * {
+        @apply border-stone-200;
+    }
+
+    .dark * {
+        @apply border-stone-800;
+    }
+
+    body {
+        @apply bg-stone-50 text-stone-900 antialiased;
+    }
+
+    .dark body {
+        @apply bg-stone-950 text-stone-100;
+    }
+
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+
+    ::selection {
+        @apply bg-[#e8e7f0] text-[#2c2c56];
+    }
+
+    .dark ::selection {
+        @apply bg-[#42427b] text-white;
+    }
+}
+
+.surface-grid {
+    background-image: radial-gradient(rgba(66, 66, 123, 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+.dark .surface-grid {
+    background-image: radial-gradient(rgba(202, 179, 144, 0.1) 1px, transparent 1px);
+}
