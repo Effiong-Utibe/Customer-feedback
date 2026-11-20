@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UI Ventures Feedback
 
 A customer feedback and survey management application built with Laravel 13, Inertia.js, React, TypeScript, PostgreSQL, Fortify, and Spatie Permission. It supports customer submissions, private staff workflows, scheduled surveys, reporting, exports, and audit history.
@@ -77,3 +78,7 @@ php artisan schedule:list
 npm run typecheck
 npm run build
 ```
+=======
+# Customer-feedback
+Group 45 project
+>>>>>>> 10a029317d7807f824093c8f02919f74519b5d6e
